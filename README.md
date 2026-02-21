@@ -5,7 +5,11 @@
 
 
 **Algoritma yang Digunakan**
+
+
 **🔷 Arsitektur Model Bi-LSTM**
+
+
 **📌 1. Data Preprocessing**
 - Text cleaning (lowercasing, removal of punctuation/symbols jika diperlukan)
 - Tokenisasi teks
@@ -13,7 +17,10 @@
 - Padding sequence hingga maksimal 100 token
 - Label encoding untuk 6 kelas emosi (0–5)
 
+
 **📌 2. Arsitektur Model**
+
+
 **-> Embedding Layer**
 - Input dimension: 10.000 (vocabulary size)
 - Output dimension: embedding vector (umumnya 100–300 dimensi)
@@ -36,6 +43,7 @@
 - Activation: Softmax
 - Multi-class classification (6 emotion labels)
 
+
 **📌 3. Training Configuration** 
 - Optimizer: Adam
 - Loss Function: Categorical Crossentropy
@@ -43,13 +51,17 @@
 - Epoch: 5
 - Data split: 70% training – 30% validation (stratified)
 
-**###🔷 Arsitektur Model IndoBERT**
+**🔷 Arsitektur Model IndoBERT**
+
+
 **📌 1. Data Preparation**
 - Stratified train-validation split (70:30)
 - Tokenisasi menggunakan Hugging Face IndoBERT Tokenizer
 - Padding & truncation otomatis
 - Maximum sequence length: mengikuti default tokenizer (umumnya 128)
 - Attention mask digunakan untuk membedakan token asli & padding
+
+
 
 **📌 2. Model Architecture**
 - Pretrained Model: IndoBERT (Transformer-based)
@@ -64,6 +76,7 @@
   - Fully connected layer (6 output neurons)
   - Activation: Softmax
 
+
 **📌 3. Fine-Tuning Configuration**
 - Optimizer: AdamW
 - Learning rate: 3e-6
@@ -72,7 +85,10 @@
 - Loss function: CrossEntropyLoss
 - Evaluation per epoch (loss & prediction monitoring)
 
-**###📊 Hasil & Evaluasi Model**
+
+**📊 Hasil & Evaluasi Model**
+
+
 **🔷 1. Distribusi Emosi dalam Dataset**
 - Total data: 1.230 ulasan
 - Kategori emosi: Senang, Sedih, Marah, Takut, Netral, Muak
@@ -81,6 +97,8 @@
 - Dataset bersifat imbalanced, memengaruhi performa model pada kelas minoritas
 
 **🔷 2. Hasil Model Bi-LSTM**
+
+
 **📈 Performa Keseluruhan**
 - Accuracy: 51%
 - Macro F1-Score: 0.39
@@ -101,6 +119,8 @@
 - Sensitif terhadap kelas mayoritas.
 
 **🔷 3. Hasil Model IndoBERT**
+
+
 **📈 Performa Keseluruhan**
 - Accuracy: 60%
 - Macro F1-Score: 0.48
