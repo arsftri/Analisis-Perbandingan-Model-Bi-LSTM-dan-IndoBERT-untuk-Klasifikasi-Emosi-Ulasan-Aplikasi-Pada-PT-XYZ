@@ -1,9 +1,11 @@
 # Analisis-Perbandingan-Model-Bi-LSTM-dan-IndoBERT-untuk-Klasifikasi-Emosi-Ulasan-Aplikasi-Pada-PT-XYZ
 
-**## Dataset**: dikumpulkan melalui metode web scraping pada Google Play Store menggunakan ID aplikasi, bahasa Indonesia, SORTNEWST, dengan batasan waktu yaitu tahun 2017-2024.
 
-**## Algoritma yang Digunakan**
-**###🔷 Arsitektur Model Bi-LSTM**
+**Dataset**: dikumpulkan melalui metode web scraping pada Google Play Store menggunakan ID aplikasi, bahasa Indonesia, SORTNEWST, dengan batasan waktu yaitu tahun 2017-2024.
+
+
+**Algoritma yang Digunakan**
+**🔷 Arsitektur Model Bi-LSTM**
 **📌 1. Data Preprocessing**
 - Text cleaning (lowercasing, removal of punctuation/symbols jika diperlukan)
 - Tokenisasi teks
